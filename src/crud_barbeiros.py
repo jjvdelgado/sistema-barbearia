@@ -154,7 +154,6 @@ class CRUDBarbeiro:
             print("ID inválido!")
             return
         
-        # Buscar barbeiro - CORRIGIDO: %s
         query = "SELECT * FROM barbeiro WHERE id_barbeiro = %s"
         barbeiro = self.db.executar_query(query, (id_barbeiro,))
         

@@ -37,14 +37,14 @@ Substituir "postgres" pela senha correta.
 
 ================================================================
 
-PASSO 3: POPULAR O BANCO DE DADOS
+PASSO 3: CRIAR AS TABELAS E POPULAR O BANCO DE DADOS
 
-Executar os scripts SQL na ordem:
+ Para criar as tabelas e popular o banco basta rodar pelo queryTool do pgAdmin os dois arquivos:
 
-    psql -U postgres -d barbearia -f sql/schema.sql
-    psql -U postgres -d barbearia -f sql/populate.sql
+    sql/schema.sql -> cria as tabelas
+    sql/populate.sql -> popula o banco
 
-Ou deixar o sistema popular automaticamente na primeira execução.
+Ou deixar o sistema criar e popular automaticamente na primeira execução.
 
 ================================================================
 

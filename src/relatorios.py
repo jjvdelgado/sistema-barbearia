@@ -19,8 +19,6 @@ class Relatorios:
             print("Formato de data inválido! Use DD/MM/AAAA")
             return
         
-        # CORRIGIDO: Usar COALESCE para pegar data_atendimento (walk-in) ou data_agendada (agendados realizados)
-        # e status 'finalizado' ao invés de 'concluido'
         query = """
             SELECT 
                 a.id_atendimento,
@@ -72,7 +70,6 @@ class Relatorios:
         """Relatório 2: Ranking de serviços mais solicitados"""
         print("\n=== RELATÓRIO: SERVIÇOS MAIS SOLICITADOS ===\n")
         
-        # CORRIGIDO: status 'finalizado' ao invés de 'concluido'
         query = """
             SELECT 
                 s.nome,
@@ -129,7 +126,6 @@ class Relatorios:
             print("Formato de data inválido! Use DD/MM/AAAA")
             return
         
-        # CORRIGIDO: Usar COALESCE e status 'finalizado'
         query = """
             SELECT 
                 b.nome as barbeiro,
@@ -183,7 +179,6 @@ class Relatorios:
         """Relatório 4: Clientes mais frequentes"""
         print("\n=== RELATÓRIO: CLIENTES MAIS FREQUENTES ===\n")
         
-        # CORRIGIDO: Usar COALESCE para data_atendimento e status 'finalizado'
         query = """
             SELECT 
                 c.nome,
@@ -233,7 +228,6 @@ class Relatorios:
         """Relatório 5: Produtos mais vendidos"""
         print("\n=== RELATÓRIO: PRODUTOS MAIS VENDIDOS ===\n")
         
-        # CORRIGIDO: status 'finalizado' ao invés de 'concluido'
         query = """
             SELECT 
                 p.nome,
